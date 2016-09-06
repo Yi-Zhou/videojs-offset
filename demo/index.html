@@ -18,7 +18,7 @@
     <video id="video_example" class="video-js vjs-default-skin" controls
            preload="auto" width="640" height="264"
            data-setup="{}">
-      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4'>
+      <source src="http://www.html5videoplayer.net/videos/toystory.mp4" type='video/mp4'>
       <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
     <!-- end demo markup -->
@@ -27,20 +27,23 @@
     <p>Check out the <a href="https://github.com/cladera/videojs-offset">project repo</a>.
     <p>Copyright 2014 Carles Galan Cladera</p>
 
-    <script src="http://vjs.zencdn.net/4.10/video.js"></script>
+    <script src="video.js"></script>
+    <script src="YouTube.js"></script>
     <script src="./../dist/videojs-offset.js"></script>
 
     <script>
       /* begin demo script */
 
-      var player = videojs('video_example', {
-        plugins: {
-          offset: {
-            start: 5,
-            end: 40
-          }
+      var player = videojs(document.getElementById("vid2"),
+        {
+          plugins: {
+            offset: {
+              start: 5,
+              end: 40
+            }
+          } 
         }
-      });
+      );
 
       /* end demo script */
     </script>
